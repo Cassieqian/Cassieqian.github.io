@@ -344,7 +344,7 @@ audio {
   animation-duration: 1.2s;
 }
 .logo img {
-  display: flex;
+  display: none;
   width: 32px;
   height: 32px;
 }
@@ -359,8 +359,8 @@ audio {
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-mask-box-image: url("/img/logo.png");
-  background-color: #fff;
-  width: 75px;
+  background: linear-gradient(to right, #00ffe7, #c000ff);
+  width: 125px;
   height: 32px;
   mask-image: url("/img/logo.png");
   mask-size: contain;
@@ -1020,9 +1020,9 @@ footer .copyright a {
   animation-duration: 1.2s;
   display: flex;
   flex-direction: row-reverse;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 32px;
-  margin: 0 20px 20px 0;
+  margin: 0 40px 20px 0;
 }
 .menu li.search-bar {
   position: relative;
@@ -1059,6 +1059,9 @@ footer .copyright a {
   font-size: 0.8rem;
   opacity: 0.8;
   font-weight: 700;
+}
+.menu li:last-child {
+  margin-right: 0px;
 }
 .menu a {
   color: #666;
