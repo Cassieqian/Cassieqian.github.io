@@ -1,6 +1,5 @@
 /**
  * Hexo-obsidian-theme
- * @author Guo Xiang - @TriDiamond
  * @description Use for hexo obsidian theme
  */
 //JSHint ingores
