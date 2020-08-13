@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="cassieqian Obsidian,"> 
-    <meta name="description" content="前言 你肯定要问，一个程序员为什么要写关于计算机网络的博客？在我刚做程序员的时候，我也是闷头只敲代码，但是随着时间的累计，我发现，学好周边知识及其原理非常对个人提升及工作有非常大的帮助。最直观的可能,"> 
+    <meta name="description" content="前言 你肯定要问，一个程序员为什么要写关于计算机网络的博客？在我刚做程序员的时候，我也是闷头只敲代码，但是随着时间的累计，我发现，学好周边知识及其原理对个人提升及工作有非常非常大的帮助。最直观的可能,"> 
     <meta name="author" content="韩倩倩 Cassie"> 
     <link rel="alternative" href="atom.xml" title="cassieqian&#39;s blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -98,7 +98,7 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    658
+                    1.6k
                 </span>
                 
                 
@@ -136,7 +136,7 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p> 你肯定要问，一个程序员为什么要写关于计算机网络的博客？在我刚做程序员的时候，我也是闷头只敲代码，但是随着时间的累计，我发现，学好周边知识及其原理非常对个人提升及工作有非常大的帮助。最直观的可能就是排错能力上，真的差的不是几个量级那么简单。当然了，吹牛逼也更有底气了。</p>
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p> 你肯定要问，一个程序员为什么要写关于计算机网络的博客？在我刚做程序员的时候，我也是闷头只敲代码，但是随着时间的累计，我发现，学好周边知识及其原理对个人提升及工作有非常非常大的帮助。最直观的可能就是排错能力上，真的差的不是几个量级那么简单。在应用程序的设计上更加全面了，亦可无坚不摧。当然了，吹牛逼也更有底气了。</p>
 <hr>
 <p> 本博客引用主来自于  [^计算机网络（自顶向下）]。<br> [^计算机网络（自顶向下）]：原书第六版 人间圣经①</p>
 <p> 本博客会采用连载的形式记录。</p>
@@ -151,7 +151,36 @@
 <hr>
 <p>性能测度指标：<br>时延 丢包 吞吐量(throughout)</p>
 <hr>
-<p>吞吐量<br>瞬时吞吐量（instantaneous throughout） bps<br>平均吞吐量（average throughout）:1.电话&gt;24kbps 2.实时视频 &gt;256kbps<br>文件传输吞吐量 min[R1,R2…]<br>因特网中对吞吐量的限制因素通常是：接入网<br>分层的体系结构：描述计算机网络体系<br>分层有优点是什么？为什么要采用分层的方式描述？如何分层？</p>
+<p>吞吐量<br>瞬时吞吐量（instantaneous throughout） bps<br>平均吞吐量（average throughout）:1.电话&gt;24kbps 2.实时视频 &gt;256kbps<br>文件传输吞吐量 min[R1,R2…]<br>因特网中对吞吐量的限制因素通常是：接入网<br>分层的体系结构：描述计算机网络体系<br>分层有优点是什么？分层的缺点是什么？为什么要采用分层的方式描述？如何分层？</p>
+<p>各层的所有协议称为协议栈：</p>
+<ul>
+<li>五层 </li>
+</ul>
+<ol>
+<li>应用层：<br>应用层协议：HTTP(超文本传输协议) SMTP(电子邮件传输协议) FTP(文件传输协议) 域名系统<br>应用层的信息分组称为：报文</li>
+<li>运输层：<br>运输层协议：TCP UDP<br>职责：运输应用层报文 向目的地确保传递及（发送方/接收方速率匹配）<br>运输层的信息分组称为：报文段（segment）</li>
+<li>网络层<br>网络层协议：IP 路由选择协议（有很多）<br>网络的信息分组称为：数据报（datagram）<br>由运输层协议（TCP UDP）向网络层递交目的地地址及报文段</li>
+<li>链路层<br>链路层协议：以太网 wifi 电缆接入网的DOCSIS协议<br>将数据报从网络层下放到链路层，于下一个结点，链路层再上传到网络层<br>链路层信息分组：帧（frame）</li>
+<li>物理层<br>物理层协议：</li>
+</ol>
+<ul>
+<li>以太网：双绞铜线 同轴电缆 光纤</li>
+</ul>
+<ul>
+<li>七层（OSI）<br>多的两层</li>
+</ul>
+<ol>
+<li>表示层 数据加密 数据压缩 数据描述等</li>
+<li>会话层 数据交换定界及同步功能：建立检查点及恢复方案的方法<br>这两层由应用程序的开发者来决定</li>
+</ol>
+<p>网络攻击：</p>
+<ol>
+<li>病毒</li>
+<li>蠕虫<blockquote>
+<p>到这里，我开始思考 学习这部分内容对我最直观的帮助及要求是什么 作为应用程序的开发者，在会话层及表示层根据自己的需要创建自己要有的服务（这也是自己要学习的）<br>网络攻击一般是在应用程序上做文章，那么文章是如何做的呢？只有知道对手的样子及核心，才能对网络设计有更好的见地，亦能将攻击带来的损失降到最低。</p>
+</blockquote>
+</li>
+</ol>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
